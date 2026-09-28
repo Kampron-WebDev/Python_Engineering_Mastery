@@ -1,0 +1,37 @@
+{
+  // Ctrl+Shift+B  -> run the open .py file with the course's Python.
+  // Ctrl+Shift+P  -> "Tasks: Run Test Task" -> test the exercise you have open.
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run this file (Python)",
+      "type": "process",
+      "command": "C:\\Users\\QweQu Antwi\\Desktop\\Python-Engineering-Mastery\\.venv\\Scripts\\python.exe",
+      "args": ["${file}"],
+      "options": { "cwd": "${fileDirname}" },
+      "group": { "kind": "build", "isDefault": true },
+      "presentation": { "clear": true, "focus": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "Test this exercise",
+      "type": "process",
+      "command": "C:\\Users\\QweQu Antwi\\Desktop\\Python-Engineering-Mastery\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "pytest"],
+      "options": { "cwd": "${fileDirname}" },
+      "group": { "kind": "test", "isDefault": true },
+      "presentation": { "clear": true, "focus": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "Test the model solution (only after trying!)",
+      "type": "process",
+      "command": "C:\\Users\\QweQu Antwi\\Desktop\\Python-Engineering-Mastery\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "pytest"],
+      "options": { "cwd": "${fileDirname}", "env": { "CHECK_SOLUTION": "1" } },
+      "group": "test",
+      "presentation": { "clear": true, "focus": true },
+      "problemMatcher": []
+    }
+  ]
+}

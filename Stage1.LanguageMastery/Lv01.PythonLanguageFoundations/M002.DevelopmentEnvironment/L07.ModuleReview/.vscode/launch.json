@@ -1,0 +1,25 @@
+{
+  // F5 -> pick one. Set a breakpoint first by clicking left of a line number.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug this file",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "cwd": "${fileDirname}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Debug this exercise's tests",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "args": ["--timeout=0", "${fileDirname}"],
+      "cwd": "${fileDirname}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
+}

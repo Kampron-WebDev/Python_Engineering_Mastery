@@ -1,0 +1,20 @@
+[project]
+name = "python-engineering-mastery"
+version = "0.1.0"
+description = "A 24–30 month Python language, backend and AI-infrastructure course."
+requires-python = ">=3.13"
+dependencies = []
+
+# Install with:  .venv\Scripts\python -m pip install --group dev     (or: uv sync)
+[dependency-groups]
+dev = ["pytest>=8", "pytest-timeout>=2"]
+
+[tool.pytest.ini_options]
+# importlib mode: every exercise has a test_main.py, and that's fine.
+# timeout: a starter with an accidental infinite loop fails after 20 s instead of hanging.
+addopts = "--import-mode=importlib --timeout=20 -p no:cacheprovider -q"
+norecursedirs = [".venv", ".git", "tools", "__pycache__", "solution", "Examples"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
