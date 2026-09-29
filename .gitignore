@@ -21,3 +21,6 @@ dist/
 .DS_Store
 Thumbs.db
 *.log
+
+# Written by ATLAS on every run (Desktop/ATLAS)
+ATLAS-STATUS.md
